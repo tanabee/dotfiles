@@ -24,3 +24,5 @@ set fileencodings=utf-8,iso-2022-jp,euc-jp,ucs-2le,ucs-2,cp932
 
 nmap * *N
 nmap # #N
+
+set visualbell t_vb=
