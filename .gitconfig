@@ -1,0 +1,16 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+[user]
+	email = tanabee1986@gmail.com
+	name = tanabee
+[push]
+	default = current
+[pull]
+	default = current
