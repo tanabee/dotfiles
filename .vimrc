@@ -1,38 +1,18 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible
+filetype off
 
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-
-Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'leafgarland/typescript-vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Shougo/unite.vim'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
-syntax enable
-set background=dark
-colorscheme solarized
+call vundle#end()
+filetype plugin indent on
 
 imap <c-j> <esc>
 
@@ -46,16 +26,17 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set backspace=2
-set autoindent
-set hlsearch
+set expandtab
 
+au BufNewFile,BufRead *.yml set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.html set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.js set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.css set nowrap tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.text set nowrap tabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.md set nowrap tabstop=4 shiftwidth=4 softtabstop=4
+au BufNewFile,BufRead *.py set nowrap tabstop=4 shiftwidth=4 softtabstop=4
 
-set expandtab
-
+set hlsearch
 set encoding=utf-8
 set fileencodings=utf-8,iso-2022-jp,euc-jp,ucs-2le,ucs-2,cp932
 
@@ -64,5 +45,18 @@ nmap # #N
 
 set visualbell t_vb=
 
-" NERDTree
+let g:solarized_termcolors=16
+let g:solarized_termtrans=1
+let g:solarized_degrade=0
+let g:solarized_bold=1
+let g:solarized_underline=1
+let g:solarized_italic=1
+let g:solarized_contrast='normal'
+let g:solarized_visibility='normal'
+set background=dark
+colorscheme solarized
+
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+" zencoding
+"let g:user_emmet_leader_key = '<c-q>'
