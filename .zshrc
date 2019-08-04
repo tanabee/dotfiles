@@ -1,3 +1,4 @@
+# alias
 alias vi='nvim'
 alias vim='nvim'
 alias python='python3'
@@ -6,3 +7,6 @@ alias python='python3'
 fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -U compinit
 compinit -u
+
+# prompt
+PROMPT="%~ %# "
