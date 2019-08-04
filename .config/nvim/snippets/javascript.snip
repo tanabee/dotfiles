@@ -1,0 +1,23 @@
+snippet SpreadsheetApp.getValues()
+options head
+  var values = SpreadsheetApp
+    .getActiveSpreadsheet()
+    .getSheetByName('${1}')
+    .getDataRange()
+    .getValues();
+
+snippet SpreadsheetApp.setValues()
+options head
+  SpreadsheetApp
+    .getActiveSpreadsheet()
+    .getSheetByName('${1}')
+    .getDataRange()
+    .setValues(${1});
+
+snippet SpreadsheetApp.addMenu()
+options head
+  SpreadsheetApp
+    .getActiveSpreadsheet()
+    .addMenu('${1}', [
+      {name: '${2}', functionName: '${3}'},
+    ]);
