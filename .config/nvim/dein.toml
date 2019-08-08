@@ -42,5 +42,6 @@ repo = 'airblade/vim-gitgutter'
 repo = 'iCyMind/NeoSolarized'
 hook_add = '''
   set termguicolors 
+  set background=dark
   colorscheme NeoSolarized
 '''

@@ -23,9 +23,6 @@ set tabstop=2
 au BufNewFile,BufRead *.md set nowrap tabstop=4 shiftwidth=4 softtabstop=4
 au BufNewFile,BufRead *.py set nowrap tabstop=4 shiftwidth=4 softtabstop=4
 
-" normal mode
-nnoremap <c-c> <esc>
-
 " replace ; with : in normal mode
 nnoremap ; :
 nnoremap : ;
