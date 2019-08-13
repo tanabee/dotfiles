@@ -21,9 +21,9 @@ hook_add = '''
   imap <C-k> <Plug>(neosnippet_expand_or_jump)
   smap <C-k> <Plug>(neosnippet_expand_or_jump)
   xmap <C-k> <Plug>(neosnippet_expand_target)
-  if has('conceal')
-    set conceallevel=2 concealcursor=niv
-  endif
+  "if has('conceal')
+  "  set conceallevel=2 concealcursor=niv
+  "endif
   let g:neosnippet#snippets_directory = '~/.config/nvim/snippets/'
 '''
 on_source = ['neosnippet-snippets', 'deoplete.nvim']
@@ -32,7 +32,7 @@ depends = ['neosnippet-snippets']
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
-  nnoremap <silent><C-x> :NERDTreeToggle<CR>
+  nnoremap <silent><C-e> :NERDTreeToggle<CR>
 '''
 
 [[plugins]]
