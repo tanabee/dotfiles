@@ -26,11 +26,3 @@ au BufNewFile,BufRead *.py set nowrap tabstop=4 shiftwidth=4 softtabstop=4
 " replace ; with : in normal mode
 nnoremap ; :
 nnoremap : ;
-
-" move window rules
-nnoremap s <Nop>
-nnoremap sj <C-w>j
-nnoremap sk <C-w>k
-nnoremap sl <C-w>l
-nnoremap sh <C-w>h
-nnoremap ss <C-w>w
