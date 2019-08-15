@@ -1,0 +1,24 @@
+{
+  "title": "command 組む合わせ入力の無効化",
+  "rules": [
+    {
+      "description": "⌘W（ウィンドウを閉じる）の無効化",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "w",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
