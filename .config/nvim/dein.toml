@@ -45,3 +45,6 @@ hook_add = '''
   set background=dark
   colorscheme NeoSolarized
 '''
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
