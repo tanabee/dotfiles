@@ -37,6 +37,9 @@ hook_add = '''
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
+hook_add = '''
+  set updatetime=100
+'''
 
 [[plugins]]
 repo = 'iCyMind/NeoSolarized'
