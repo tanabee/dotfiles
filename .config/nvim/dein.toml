@@ -48,3 +48,15 @@ hook_add = '''
 
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+
+[[plugins]]
+repo = 'prettier/vim-prettier'
+build = 'yarn install'
+on_ft = ['javascript', 'typescript', 'json', 'markdown']
+hook_add = '''
+  let g:prettier#autoformat = 0
+  autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js,*.json,*.graphql,*.md,*.yaml,*.html PrettierAsync
+'''
