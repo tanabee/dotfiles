@@ -53,9 +53,6 @@ hook_add = '''
 repo = 'leafgarland/typescript-vim'
 
 [[plugins]]
-repo = 'leafgarland/typescript-vim'
-
-[[plugins]]
 repo = 'prettier/vim-prettier'
 build = 'yarn install'
 on_ft = ['javascript']
