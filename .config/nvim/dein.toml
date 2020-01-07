@@ -58,8 +58,13 @@ repo = 'leafgarland/typescript-vim'
 [[plugins]]
 repo = 'prettier/vim-prettier'
 build = 'yarn install'
-on_ft = ['javascript', 'typescript', 'json', 'markdown']
+on_ft = ['javascript']
 hook_add = '''
   let g:prettier#autoformat = 0
-  autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js,*.json,*.graphql,*.md,*.yaml,*.html PrettierAsync
+  let g:prettier#config#use_tabs = 'false'
+  let g:prettier#config#semi = 'false'
+  let g:prettier#config#single_quote = 'true'
+  let g:prettier#config#bracket_spacing = 'true' 
+  let g:prettier#config#jsx_bracket_same_line = 'false'
+  autocmd BufWritePre *.jsx,*.js PrettierAsync
 '''
