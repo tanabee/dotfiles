@@ -12,5 +12,15 @@ compinit -u
 PROMPT="%~ %# "
 
 # anyenv
-export PATH="$HOME/.anyenv/bin:$PATH"
+export PATH="$HOME/.anyenv/bin:$HOME/go/bin:$PATH"
 eval "$(anyenv init -)"
+
+# open GitHub repo
+open() {
+  hub browse
+}
+
+# create GitHub repo
+pr() {
+  hub pull-request
+}
