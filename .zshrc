@@ -16,7 +16,7 @@ export PATH="$HOME/.anyenv/bin:$HOME/go/bin:$PATH"
 eval "$(anyenv init -)"
 
 # open GitHub repo
-open() {
+browse() {
   hub browse
 }
 
