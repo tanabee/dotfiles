@@ -1,16 +1,16 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-on_event = 'InsertEnter'
-hook_add = '''
-  let g:deoplete#enable_at_startup = 1
-  imap <expr><TAB>
-    \ pumvisible() ? "\<C-n>" :
-    \ neosnippet#expandable_or_jumpable() ?
-    \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-'''
+#[[plugins]]
+#repo = 'Shougo/deoplete.nvim'
+#on_event = 'InsertEnter'
+#hook_add = '''
+#  let g:deoplete#enable_at_startup = 1
+#  imap <expr><TAB>
+#    \ pumvisible() ? "\<C-n>" :
+#    \ neosnippet#expandable_or_jumpable() ?
+#    \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+#'''
 
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
