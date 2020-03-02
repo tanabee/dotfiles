@@ -16,9 +16,12 @@ set number
 
 " indent
 set expandtab
+set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set tabstop=2
+
+nmap * *N
+nmap # #N
 
 au BufNewFile,BufRead *.md set nowrap tabstop=4 shiftwidth=4 softtabstop=4
 au BufNewFile,BufRead *.py set nowrap tabstop=4 shiftwidth=4 softtabstop=4
