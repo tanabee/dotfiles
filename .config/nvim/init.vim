@@ -26,6 +26,10 @@ nmap # #N
 au BufNewFile,BufRead *.md set nowrap tabstop=4 shiftwidth=4 softtabstop=4
 au BufNewFile,BufRead *.py set nowrap tabstop=4 shiftwidth=4 softtabstop=4
 
+" 外部からファイル変更された時にファイルを再読込して Warning 表示を回避する
+autocmd FocusGained * checktime
+set autoread
+
 " replace ; with : in normal mode
 nnoremap ; :
 nnoremap : ;
