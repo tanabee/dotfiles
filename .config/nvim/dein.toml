@@ -42,18 +42,8 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'iCyMind/NeoSolarized'
-hook_add = '''
-  set termguicolors 
-  set background=dark
-  colorscheme NeoSolarized
-'''
-
-[[plugins]]
-repo = 'leafgarland/typescript-vim'
-
-[[plugins]]
 repo = 'prettier/vim-prettier'
+rev = '0.2.7'
 build = 'yarn install'
 on_ft = ['javascript']
 hook_add = '''
