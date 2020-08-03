@@ -1,39 +1,42 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-on_event = 'InsertEnter'
-#hook_add > let g:deoplete#enable_at_startup = 1
-hook_add = '''
-  imap <expr><TAB>
-    \ pumvisible() ? "\<C-n>" :
-    \ neosnippet#expandable_or_jumpable() ?
-    \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-'''
-
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
-
-[[plugins]]
-repo = 'Shougo/neosnippet.vim'
-hook_add = '''
-  imap <C-k> <Plug>(neosnippet_expand_or_jump)
-  smap <C-k> <Plug>(neosnippet_expand_or_jump)
-  xmap <C-k> <Plug>(neosnippet_expand_target)
-  "if has('conceal')
-  "  set conceallevel=2 concealcursor=niv
-  "endif
-  let g:neosnippet#snippets_directory = '~/.config/nvim/snippets/'
-'''
-on_source = ['neosnippet-snippets', 'deoplete.nvim']
-depends = ['neosnippet-snippets']
+# [[plugins]]
+# repo = 'Shougo/deoplete.nvim'
+# on_event = 'InsertEnter'
+# #hook_add > let g:deoplete#enable_at_startup = 1
+# hook_add = '''
+#   imap <expr><TAB>
+#     \ pumvisible() ? "\<C-n>" :
+#     \ neosnippet#expandable_or_jumpable() ?
+#     \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+# '''
+# 
+# [[plugins]]
+# repo = 'Shougo/neosnippet-snippets'
+# 
+# [[plugins]]
+# repo = 'Shougo/neosnippet.vim'
+# hook_add = '''
+#   imap <C-k> <Plug>(neosnippet_expand_or_jump)
+#   smap <C-k> <Plug>(neosnippet_expand_or_jump)
+#  xmap <C-k> <Plug>(neosnippet_expand_target)
+#   "if has('conceal')
+#   "  set conceallevel=2 concealcursor=niv
+#   "endif
+#   let g:neosnippet#snippets_directory = '~/.config/nvim/snippets/'
+# '''
+# on_source = ['neosnippet-snippets', 'deoplete.nvim']
+# depends = ['neosnippet-snippets']
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
   nnoremap <silent><C-e> :NERDTreeToggle<CR>
 '''
+
+# [[plugins]]
+# repo = 'leafgarland/typescript-vim'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
@@ -43,15 +46,12 @@ hook_add = '''
 
 [[plugins]]
 repo = 'prettier/vim-prettier'
-rev = '0.2.7'
-build = 'yarn install'
-on_ft = ['javascript']
+on_ft = ['javascript', 'typescript', 'yaml', 'json', 'css', 'markdown']
 hook_add = '''
-  let g:prettier#autoformat = 1
+  let g:prettier#config#print_width = 100
+  let g:prettier#config#tab_width = 2
   let g:prettier#config#use_tabs = 'false'
   let g:prettier#config#semi = 'false'
   let g:prettier#config#single_quote = 'true'
-  let g:prettier#config#bracket_spacing = 'true' 
-  let g:prettier#config#jsx_bracket_same_line = 'false'
-  autocmd BufWritePre *.jsx,*.js PrettierAsync
+  autocmd BufWritePre *.{jsx,js,ts,json,css,md,yaml} PrettierAsync
 '''
