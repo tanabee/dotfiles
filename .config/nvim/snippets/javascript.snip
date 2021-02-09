@@ -1,12 +1,55 @@
-snippet SpreadsheetApp.getValues()
+snippet rc
 options head
-  var values = SpreadsheetApp
+  import React from 'react'
+
+  export default function ${1:COMPONENT}() {
+    return <></>
+  }
+
+snippet ue
+options head
+  useEffect(() => {
+  }, [])
+
+snippet rcue
+options head
+  import React, { useEffect } from 'react'
+
+  export default function ${1:COMPONENT}() {
+    useEffect(() => {
+    }, [])
+
+    return <></>
+  }
+
+snippet rcon
+options head
+  import React, { createContext, useCallback, useContext, useEffect, useState } from 'react'
+
+  const XXXContext = createContext()
+
+  export function XXXProvider({ children }) {
+    const [state, setState] = useState(null)
+
+    return (
+      <XXXContext.Provider value={{ state }} children={children} />
+    )
+  }
+
+  export function useXXX() {
+    return useContext(XXXContext)
+  }
+
+
+snippet sg 
+options head
+  const values = SpreadsheetApp
     .getActiveSpreadsheet()
     .getSheetByName('${1}')
     .getDataRange()
     .getValues();
 
-snippet SpreadsheetApp.setValues()
+snippet ss
 options head
   SpreadsheetApp
     .getActiveSpreadsheet()
@@ -14,10 +57,14 @@ options head
     .getDataRange()
     .setValues(${1});
 
-snippet SpreadsheetApp.addMenu()
+snippet sa
 options head
   SpreadsheetApp
     .getActiveSpreadsheet()
     .addMenu('${1}', [
       {name: '${2}', functionName: '${3}'},
     ]);
+
+snippet pg
+options head
+  PropertiesService.getScriptProperties().getProperty(${1})
